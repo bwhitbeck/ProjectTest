@@ -8,9 +8,7 @@ using namespace std;
 int main(int argc, char * argv[])
 {
 	
-	Screen screen = Screen(1,3);
-
-
+	Screen screen = Screen(300,300);
 	cin.get();
 	return 0;
 }
