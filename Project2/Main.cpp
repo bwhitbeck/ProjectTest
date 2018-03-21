@@ -2,14 +2,15 @@
 #include <fstream>
 #include <regex>
 #include <stdio.h>
+#include <Windows.h>
 #include "resource.h"
-#include<Windows.h>
+#include "Ground.h"
 #include "Screen.h"
 #include "SDL.h"
 
 void getSheet(){
 	
-	HRSRC myResource = FindResource(NULL, MAKEINTRESOURCE(IDR_TXTFILE1), "TXTFILE");
+	HRSRC myResource = FindResource(NULL, MAKEINTRESOURCE(GroundTXT), "TXTFILE");
 	HGLOBAL resourceData = LoadResource(NULL, myResource);
 	void* Data = LockResource(resourceData);
 
@@ -25,10 +26,8 @@ void getSheet(){
 
 int main(int argc, char * argv[])
 {
-	getSheet();
-	/*Screen screen = Screen(300,300);
-	std::cin.get();
-	return 0;
-	*/
+	Ground ground = Ground();
+	std::cout << "object is :" << ground.getAlive() << std::endl;
+	system("pause");
 	return 0;
 }

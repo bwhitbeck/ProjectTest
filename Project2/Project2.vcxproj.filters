@@ -24,6 +24,9 @@
     <ClCompile Include="gameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Ground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Screen.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,6 +53,8 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\..\..\Projects\Resources\Ground.txt" />
+    <Text Include="..\..\..\..\..\..\Projects\Resources\Ground.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

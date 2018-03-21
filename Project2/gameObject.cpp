@@ -1,6 +1,8 @@
 #include "gameObject.h"
 #include "SDL.h"
+#include <iostream>
 #include "SDL_image.h"
+#include <stdio.h>
 #include <vector>
 
 int active = 0;	//is the prite to be rendered
@@ -21,7 +23,8 @@ std::vector<SDL_Texture>* gameObject::loadSprites() {
 	will require hard defined spritesheet.png
 	fills sprites;
 */
-void gameObject::buildSprites() {}
+void gameObject::buildSprites() {
+}
 
 void gameObject::action() {}
 
@@ -46,17 +49,17 @@ void gameObject::setActive(int set) {
 Initialize the object,
 If no gameObject is returned, this is parent object, and should never go active
 if a gameObject is returned, point the */
+gameObject::gameObject() {
+	std::cout << "This is a gameObject" << std::endl;
+	buildSprites();
+	active = -1;
+}
+
 gameObject::gameObject(int posx, int posy, gameObject* origin = nullptr)
 {
-	if (!(origin == nullptr)) {
-		sprites = origin->loadSprites();
-		x = posx;
-		y = posy;
-	}
-	else {
-		buildSprites();
-		active = -1;
-	}
+	sprites = origin->loadSprites();
+	x = posx;
+	y = posy;
 }
 
 gameObject::~gameObject()
